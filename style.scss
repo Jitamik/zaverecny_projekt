@@ -1,0 +1,53 @@
+$pozadiheader: #D9D9D9;
+$pozadiboxik: #D4CDCD;
+$pozaditlacitka: #BFB0B0;
+$hlavninadpis: brown;
+
+body {
+    width: 1040px;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+}
+p {
+    font-size: 16px;
+    font-family: "playfair display", sans-serif;
+  }
+
+header {
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.menu {
+    font-size: 20px;
+    
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	text-decoration: none;
+	list-style: none;
+	line-height: 1;
+	}
+.menu a {
+	display: block;
+	padding: 10px 15px;
+	color: #242424;
+	text-decoration: none;
+    border: solid 1px #242424;
+	border-radius: 20px;
+}
+
+.menu li {
+	margin-left: 5px;
+}
+
+.menu a:hover {
+	background-color: $pozadiboxik;
+	color: white;
+}

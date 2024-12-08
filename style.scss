@@ -1,16 +1,44 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
 $pozadiheader: #D9D9D9;
 $pozadiboxik: #D4CDCD;
 $pozaditlacitka: #BFB0B0;
 $hlavninadpis: brown;
+$borderline: #242424;
+$nadpisy: #242424;
+$textmenu: #242424;
 
 body {
-    width: 1040px;
+    
     margin: 0;
+    
 }
 
-h1 {
-    color: black;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $nadpisy;
 }
+
+h1,
+h2 {
+    margin: 20px 20px;
+}
+.hlavicka {
+    background-image: url(/images/uvodni_foto.jpg);
+    background-size: cover;
+    padding: 80px;
+    color: $pozadiheader;
+}
+.logo {
+    border-radius: 20px;
+    border: 2px solid $borderline;
+    justify-items: center;
+}
+
 p {
     font-size: 16px;
     font-family: "playfair display", sans-serif;
@@ -19,17 +47,23 @@ p {
 header {
     font-size: 50px;
     font-weight: bold;
+    text-align: center;
+   
 
 }
 
 .menu {
     font-size: 20px;
-    
+    background-color: $pozadiboxik;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }
 .menu ul {
 	margin: 0;
 	padding: 0;
-	display: flex;
+	display: block;
 	text-decoration: none;
 	list-style: none;
 	line-height: 1;
@@ -37,17 +71,244 @@ header {
 .menu a {
 	display: block;
 	padding: 10px 15px;
-	color: #242424;
+    margin: 10px 0;
+	color: $textmenu;
 	text-decoration: none;
-    border: solid 1px #242424;
-	border-radius: 20px;
+    text-transform:uppercase;
+    font-weight: bold;
+    border: solid 2px $borderline;
+	border-radius: 10px;
+    background-color: $pozaditlacitka;
+   width: 100%;
+   max-width: 220px;
+   height: 55px;
+   text-align: center;
+   text-justify: center;
+   justify-content: center;
 }
 
 .menu li {
-	margin-left: 5px;
+	margin: 0;
 }
+
+.menu li a img {
+    width: 32px;
+    height: auto;
+    background-color: $pozaditlacitka;
+}
+
 
 .menu a:hover {
 	background-color: $pozadiboxik;
 	color: white;
+    transform: scale(1.05);
+}
+.uvod {
+    display: block;
+   text-align: center;
+   width: 80%;
+   max-width: 800px;
+   min-width: 300px;
+   padding: 5% 10%;
+   margin: 0 auto;
+   box-sizing: border-box;
+   position: relative;
+   
+}
+.uvod::before,
+.uvod::after {
+    content: ""; 
+    display: block;
+    width: 100%; 
+    height: 2px; 
+    background-color: $borderline; 
+    margin: 10px 0; 
+}
+
+.uvod::before {
+    margin-bottom: 10px;
+}
+
+.uvod::after {
+    margin-top: 10px;
+}
+
+.karty {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px;
+   max-width: 800px;
+   flex-wrap:wrap;
+    
+}
+
+.karta_clanku {
+    display: flex;
+    flex-direction: column; /* Obsah karet zůstane vedle sebe */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Karta vyplní šířku kontejneru */
+    max-width: px; /* Zaručí konzistentní maximální šířku */
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    border: 2px solid $borderline;
+    border-radius: 20px;
+    background-color: $pozadiboxik;
+   
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+} 
+.karta_clanku:hover {
+    transform: scale(1.05); /* Zvýraznění při najetí myší */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Přidání stínu */
+}
+
+ 
+.foto_karta {
+    flex-shrink: 0;
+    width: 300px;
+   height: auto;
+   object-fit: cover;
+    border-radius: 10px;
+    align-content: center;
+    display: block;
+}
+.text-karta {
+    
+    flex-grow: 1;
+    display: flex;
+   width: auto;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+
+.sidebox {
+    border: 1px solid $borderline;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+.nadpis_sidebox {
+    margin: 10px;
+    padding: 10px;
+}
+article {
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    border: 2px solid $borderline;
+    border-radius: 20px;
+    background-color: $pozadiboxik;
+   margin: 20px auto;
+   max-width: 1000px;
+
+}
+.nadpis_clanek {
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.karta_receptu {
+    display: flex;
+    flex-direction: column; /* Obsah karet zůstane vedle sebe */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Karta vyplní šířku kontejneru */
+    max-width: px; /* Zaručí konzistentní maximální šířku */
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    border: 2px solid $borderline;
+    border-radius: 20px;
+    background-color: $pozadiboxik;
+    margin: 0 auto; 
+}
+
+footer {
+    padding: 30px 0;
+    margin-top: 10px;
+	background-color: $textmenu;
+	color: white;
+	text-align: center;
+    text-justify: center;
+}
+@media screen and (min-width: 1100px) {
+    .hlavicka {
+        background-image: url(/images/uvodni_foto.jpg);
+        background-size: cover;
+        padding: 80px;
+        color: $pozadiheader;
+    }
+body {
+       
+       margin-left: auto;
+       margin-right: auto;
+       background-color: #D9D9D9;
+    }
+    .menu {
+        font-size: 20px;
+        background-color: $pozadiboxik;
+        padding: 10px;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        line-height: 1;
+        flex-direction: row;
+        justify-content: space-evenly;
+        }
+    .menu a {
+        display: block;
+        padding: 10px 15px;
+        margin: 10px;
+        color: $textmenu;
+        text-decoration: none;
+        text-transform:uppercase;
+        font-weight: bold;
+        border: solid 2px $borderline;
+        border-radius: 10px;
+        background-color: $pozaditlacitka;
+        width: 220px;
+        height: 55px;
+       align-content: center;
+       text-align: center;
+    }
+    
+    .menu li {
+        margin-left: 5px;
+    }
+    
+    .menu li a img {
+        width: 32px;
+        height: auto;
+        background-color: $pozaditlacitka;
+    }
+    
+    .menu a:hover {
+        background-color: $pozadiboxik;
+        color: white;
+    }
+    .ingredience_foto {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .karta_clanku {
+        margin: 0 auto; /* Každá karta se zarovná na střed */
+    }
+}
+.karty {
+    flex-direction: row;
+    justify-items: center;
+    margin: 0 auto;
 }

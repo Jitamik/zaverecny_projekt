@@ -19,6 +19,12 @@ h5 {
   color: #242424;
 }
 
+.hlavicka h1 {
+  color: white; /* Barva výplně textu */
+  -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
+  font-size: 36px;
+}
+
 h1,
 h2 {
   margin: 20px 20px;
@@ -35,6 +41,8 @@ h2 {
   border-radius: 20px;
   border: 2px solid #242424;
   justify-items: center;
+  height: auto;
+  width: 200px;
 }
 
 p {
@@ -43,7 +51,7 @@ p {
 }
 
 header {
-  font-size: 50px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
 }
@@ -150,11 +158,13 @@ header {
   width: 100%; /* Karta vyplní šířku kontejneru */
   max-width: px; /* Zaručí konzistentní maximální šířku */
   padding: 20px;
+  background: linear-gradient(135deg, #D4CDCD, #BFB0B0);
   gap: 20px;
   box-sizing: border-box;
   border: 2px solid #242424;
   border-radius: 20px;
   background-color: #D4CDCD;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -244,6 +254,11 @@ footer {
     background-size: cover;
     padding: 80px;
     color: #D9D9D9;
+  }
+  .hlavicka h1 {
+    color: white; /* Barva výplně textu */
+    -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
+    font-size: 90px;
   }
   body {
     margin-left: auto;

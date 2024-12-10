@@ -149,9 +149,9 @@ header {
     gap: 20px;
     align-items: center;
     margin: 0 auto;
-    width: 600px;
+    width: 100%;
    max-width: 800px;
-   flex-wrap:wrap;
+   
     
 }
 
@@ -161,7 +161,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     width: 100%; /* Karta vyplní šířku kontejneru */
-    max-width: px; /* Zaručí konzistentní maximální šířku */
+    max-width: 100%; /* Zaručí konzistentní maximální šířku */
     padding: 20px;
     background: linear-gradient(135deg, $pozadiboxik, $pozaditlacitka); 
     gap: 20px;
@@ -183,7 +183,7 @@ header {
  
 .foto_karta {
     flex-shrink: 0;
-    width: 300px;
+    width: 100%;
    height: auto;
    object-fit: cover;
     border-radius: 10px;
@@ -194,7 +194,7 @@ header {
     
     flex-grow: 1;
     display: flex;
-   width: auto;
+   width: 100%;
    flex-direction: column;
    justify-content: flex-start;
 }
@@ -268,7 +268,7 @@ footer {
 	text-align: center;
     text-justify: center;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 768px) {
     .hlavicka {
         background-image: url(/images/uvodni_foto.jpg);
         background-size: cover;
@@ -337,12 +337,28 @@ body {
         display: flex;
         justify-content: space-evenly;
     }
-    .karta_clanku {
-        margin: 0 auto; /* Každá karta se zarovná na střed */
+    .karty {
+        flex-direction: row; /* Karty budou vedle sebe na větších obrazovkách */
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
     }
-}
-.karty {
+
+    .karta_clanku {
+        flex-direction: column;
+        max-width: 350px; /* Zaručí konzistentní maximální šířku karty */
+        margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
+    }
+
+    .foto_karta {
+        width: 100%; /* Obrázek zůstane v kartě */
+        height: 200px; /* Pevná výška pro konzistentní vzhled */
+    }
+
+    }
+
+/* .karty {
     flex-direction: row;
     justify-items: center;
     margin: 0 auto;
-}
+}*/

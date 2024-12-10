@@ -226,6 +226,23 @@ article {
     margin-left: 20px;
     margin-bottom: 0;
 }
+.nadpis_clanek::before,
+.nadpis_clanek::after {
+    content: ""; 
+    display: block;
+    width: 100%; 
+    height: 2px; 
+    background-color: $borderline; 
+    margin: 10px 0; 
+}
+
+.nadpis_clanek::before {
+    margin-bottom: 10px;
+}
+
+.nadpis_clanek::after {
+    margin-top: 10px;
+}
 
 .karta_receptu {
     display: flex;

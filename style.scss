@@ -174,8 +174,8 @@ header {
 
 } 
 .karta_clanku:hover {
-    transform: scale(1.05); /* Zvýraznění při najetí myší */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Přidání stínu */
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
  
@@ -212,9 +212,7 @@ article {
     padding: 20px;
     gap: 20px;
     box-sizing: border-box;
-    border: 2px solid $borderline;
     border-radius: 20px;
-    background-color: $pozadiboxik;
    margin: 20px auto;
    max-width: 1000px;
 

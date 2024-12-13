@@ -25,22 +25,8 @@ h5 {
 }
 
 .hlavicka h1 {
-    color: $borderline; 
+    color: $hlavninadpis; 
     font-size: 36px;
-    display: block;
-	padding: 10px 15px;
-    margin: 10px 0;
-	color: $textmenu;
-    text-transform:uppercase;
-    font-weight: bold;
-    border: solid 2px $borderline;
-	border-radius: 10px;
-    background-color: $pozadiheader;
-   width: 100%;
-   max-width: 300px;
-   height: 150px;
-   text-align: center;
-   justify-content: center;
 }
 
 
@@ -324,14 +310,6 @@ footer {
         color: white; 
         -webkit-text-stroke: 2px $borderline; 
         font-size: 90px;
-        display:inline;
-        padding: 10px 15px;
-        margin: 10px 0;
-        color: $textmenu;
-        text-transform:uppercase;
-        font-weight: bold;
-        border: none;
-        background-color: none;
     }
    
 body {

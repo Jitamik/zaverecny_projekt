@@ -344,7 +344,7 @@ footer {
   }
   .foto_karta {
     width: 100%; /* Obrázek zůstane v kartě */
-    height: auto; /* Pevná výška pro konzistentní vzhled */
+    height: 250px; /* Pevná výška pro konzistentní vzhled */
     -o-object-fit: cover;
        object-fit: cover;
   }

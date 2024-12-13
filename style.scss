@@ -25,9 +25,6 @@ h5 {
 }
 
 .hlavicka h1 {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
     color: $hlavninadpis; 
     font-size: 36px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -47,6 +44,9 @@ h2 {
     background-size: cover;
     padding: 80px;
     color: $pozadiheader;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
 }
 .logo {
     border-radius: 20px;

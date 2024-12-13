@@ -282,6 +282,10 @@ button {
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 footer {
   padding: 30px 0;
   margin-top: 10px;

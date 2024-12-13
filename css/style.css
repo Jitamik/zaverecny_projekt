@@ -22,6 +22,10 @@ h5 {
 .hlavicka h1 {
   color: white;
   font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6); /* Poloprůhledná černá */
+  padding: 5px 10px; /* Prostor kolem textu */
+  display: inline-block; /* Omezení pozadí na text */
 }
 
 h1,

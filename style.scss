@@ -255,10 +255,24 @@ article {
     padding: 20px;
     gap: 20px;
     box-sizing: border-box;
-    border: 2px solid $borderline;
-    border-radius: 20px;
-    background-color: $pozadiboxik;
     margin: 20px auto; 
+}
+.karta_receptu::before,
+.karta_receptu::after {
+    content: ""; 
+    display: block;
+    width: 100%; 
+    height: 2px; 
+    background-color: $borderline; 
+    margin: 10px 0; 
+}
+
+.karta_receptu::before {
+    margin-bottom: 10px;
+}
+
+.karta_receptu::after {
+    margin-top: 10px;
 }
 button {
     display: block;

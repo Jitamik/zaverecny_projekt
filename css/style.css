@@ -337,16 +337,18 @@ footer {
     flex-direction: row; /* Karty budou vedle sebe na větších obrazovkách */
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 20px auto;
   }
   .karta_clanku {
-    flex-direction: column;
-    max-width: 350px; /* Zaručí konzistentní maximální šířku karty */
+    max-width: 450px; /* Zaručí konzistentní maximální šířku karty */
     margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
   }
   .foto_karta {
     width: 100%; /* Obrázek zůstane v kartě */
-    height: 200px; /* Pevná výška pro konzistentní vzhled */
+    height: 250px; /* Pevná výška pro konzistentní vzhled */
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /* .karty {

@@ -4,7 +4,7 @@ html { box-sizing: border-box; }
 $pozadiheader: #D9D9D9;
 $pozadiboxik: #D4CDCD;
 $pozaditlacitka: #BFB0B0;
-$hlavninadpis: brown;
+$hlavninadpis: white;
 $borderline: #242424;
 $nadpisy: #242424;
 $textmenu: #242424;
@@ -25,8 +25,7 @@ h5 {
 }
 
 .hlavicka h1 {
-    color: white; /* Barva výplně textu */
-    -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
+    color: $hlavninadpis; /* Barva výplně textu */
     font-size: 36px;
 }
 
@@ -153,13 +152,13 @@ header {
 }
 
 .karta_clanku {
-    display: flex;
-    flex-direction: column; /* Obsah karet zůstane vedle sebe */
+   /*  display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: flex-start;
-    width: 100%; /* Karta vyplní šířku kontejneru */
-    max-width: 100%; /* Zaručí konzistentní maximální šířku */
-    padding: 20px;
+    width: 100%; Karta vyplní šířku kontejneru 
+    max-width: 100%; 
+    padding: 20px; */
     background: linear-gradient(135deg, $pozadiboxik, $pozaditlacitka); 
     gap: 20px;
     box-sizing: border-box;
@@ -168,6 +167,19 @@ header {
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column; /* Obsah karet zůstane vedle sebe */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Karta vyplní šířku kontejneru */
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    border: 2px solid $borderline;
+    border-radius: 20px;
+    background-color: $pozadiboxik;
+    margin: 20px auto; 
 
 } 
 .karta_clanku:hover {
@@ -268,6 +280,8 @@ footer {
         background-size: cover;
         padding: 80px;
         color: $pozadiheader;
+        color: $hlavninadpis; /* Barva výplně textu */
+        -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
     }
     .hlavicka h1 {
         color: white; 

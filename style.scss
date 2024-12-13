@@ -167,17 +167,14 @@ header {
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
     display: flex;
     flex-direction: column; /* Obsah karet zůstane vedle sebe */
     align-items: center;
     justify-content: flex-start;
     width: 100%; /* Karta vyplní šířku kontejneru */
     padding: 20px;
-   
-    
-    border: 2px solid $borderline;
 
+    border: 2px solid $borderline;
     background-color: $pozadiboxik;
     margin: 20px auto; 
 

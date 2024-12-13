@@ -21,7 +21,6 @@ h5 {
 
 .hlavicka h1 {
   color: white; /* Barva výplně textu */
-  -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
   font-size: 36px;
 }
 
@@ -89,7 +88,6 @@ header {
   max-width: 220px;
   height: 55px;
   text-align: center;
-  text-justify: center;
   justify-content: center;
 }
 
@@ -144,40 +142,44 @@ header {
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  margin: 0 auto;
-  width: 600px;
-  max-width: 800px;
-  flex-wrap: wrap;
+  margin: 0 10px;
 }
 
 .karta_clanku {
+  /*  display: flex;
+   flex-direction: column; 
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%; Karta vyplní šířku kontejneru 
+   max-width: 100%; 
+   padding: 20px; */
+  background: linear-gradient(135deg, #D4CDCD, #BFB0B0);
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column; /* Obsah karet zůstane vedle sebe */
   align-items: center;
   justify-content: flex-start;
   width: 100%; /* Karta vyplní šířku kontejneru */
-  max-width: px; /* Zaručí konzistentní maximální šířku */
   padding: 20px;
-  background: linear-gradient(135deg, #D4CDCD, #BFB0B0);
-  gap: 20px;
-  box-sizing: border-box;
   border: 2px solid #242424;
-  border-radius: 20px;
   background-color: #D4CDCD;
-  box-shadow: 0 4px 8px rgb(0, 0, 0);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
 }
 
 .karta_clanku:hover {
-  transform: scale(1.05); /* Zvýraznění při najetí myší */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Přidání stínu */
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .foto_karta {
   flex-shrink: 0;
-  width: 300px;
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -189,7 +191,7 @@ header {
 .text-karta {
   flex-grow: 1;
   display: flex;
-  width: auto;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -210,11 +212,11 @@ article {
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
-  border: 2px solid #242424;
   border-radius: 20px;
-  background-color: #D4CDCD;
   margin: 20px auto;
   max-width: 1000px;
+  border: solid 2px #242424;
+  background-color: #D4CDCD;
 }
 
 .nadpis_clanek {
@@ -223,20 +225,37 @@ article {
   margin-bottom: 0;
 }
 
+.nadpis_clanek::before,
+.nadpis_clanek::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #242424;
+  margin: 10px 0;
+}
+
+.nadpis_clanek::before {
+  margin-bottom: 10px;
+}
+
+.nadpis_clanek::after {
+  margin-top: 10px;
+}
+
 .karta_receptu {
   display: flex;
   flex-direction: column; /* Obsah karet zůstane vedle sebe */
   align-items: center;
   justify-content: flex-start;
   width: 100%; /* Karta vyplní šířku kontejneru */
-  max-width: px; /* Zaručí konzistentní maximální šířku */
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
   border: 2px solid #242424;
   border-radius: 20px;
   background-color: #D4CDCD;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 footer {
@@ -248,16 +267,18 @@ footer {
   text-justify: center;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 768px) {
   .hlavicka {
     background-image: url(/images/uvodni_foto.jpg);
     background-size: cover;
     padding: 80px;
     color: #D9D9D9;
-  }
-  .hlavicka h1 {
     color: white; /* Barva výplně textu */
     -webkit-text-stroke: 2px black; /* Šířka a barva obrysu */
+  }
+  .hlavicka h1 {
+    color: white;
+    -webkit-text-stroke: 2px #242424;
     font-size: 90px;
   }
   body {
@@ -312,12 +333,24 @@ footer {
     display: flex;
     justify-content: space-evenly;
   }
+  .karty {
+    flex-direction: row; /* Karty budou vedle sebe na větších obrazovkách */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
   .karta_clanku {
-    margin: 0 auto; /* Každá karta se zarovná na střed */
+    flex-direction: column;
+    max-width: 350px; /* Zaručí konzistentní maximální šířku karty */
+    margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
+  }
+  .foto_karta {
+    width: 100%; /* Obrázek zůstane v kartě */
+    height: 200px; /* Pevná výška pro konzistentní vzhled */
   }
 }
-.karty {
-  flex-direction: row;
-  justify-items: center;
-  margin: 0 auto;
-}/*# sourceMappingURL=style.css.map */
+/* .karty {
+    flex-direction: row;
+    justify-items: center;
+    margin: 0 auto;
+}*//*# sourceMappingURL=style.css.map */

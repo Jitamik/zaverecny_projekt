@@ -175,7 +175,7 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-  align-content: center;
+  align-items: center;
   display: block;
 }
 

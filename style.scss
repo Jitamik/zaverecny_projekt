@@ -260,6 +260,23 @@ article {
     background-color: $pozadiboxik;
     margin: 20px auto; 
 }
+button {
+    display: block;
+	padding: 10px 15px;
+    margin: 10px 0;
+	color: $textmenu;
+	text-decoration: none;
+    text-transform:uppercase;
+    font-weight: bold;
+    border: solid 2px $borderline;
+	border-radius: 10px;
+    background-color: $pozaditlacitka;
+   width: 100%;
+   max-width: 220px;
+   height: 55px;
+   text-align: center;
+   justify-content: center;
+}
 
 footer {
     padding: 30px 0;

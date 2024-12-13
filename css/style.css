@@ -20,7 +20,7 @@ h5 {
 }
 
 .hlavicka h1 {
-  color: white; /* Barva výplně textu */
+  color: white;
   font-size: 36px;
 }
 
@@ -146,13 +146,6 @@ header {
 }
 
 .karta_clanku {
-  /*  display: flex;
-   flex-direction: column; 
-   align-items: center;
-   justify-content: flex-start;
-   width: 100%; Karta vyplní šířku kontejneru 
-   max-width: 100%; 
-   padding: 20px; */
   background: linear-gradient(135deg, #D4CDCD, #BFB0B0);
   gap: 20px;
   box-sizing: border-box;
@@ -162,9 +155,9 @@ header {
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; /* Obsah karet zůstane vedle sebe */
+  flex-direction: column;
   justify-content: flex-start;
-  width: 100%; /* Karta vyplní šířku kontejneru */
+  width: 100%;
   padding: 20px;
   border: 2px solid #242424;
   background-color: #D4CDCD;
@@ -243,10 +236,10 @@ article {
 
 .karta_receptu {
   display: flex;
-  flex-direction: column; /* Obsah karet zůstane vedle sebe */
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%; /* Karta vyplní šířku kontejneru */
+  width: 100%;
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
@@ -315,7 +308,6 @@ footer {
   body {
     margin-left: auto;
     margin-right: auto;
-    background-color: #D9D9D9;
   }
   .menu {
     font-size: 20px;
@@ -372,12 +364,12 @@ footer {
     margin: 20px auto;
   }
   .karta_clanku {
-    max-width: 500px; /* Zaručí konzistentní maximální šířku karty */
-    margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
+    max-width: 500px;
+    margin: 0 auto;
   }
   .foto_karta {
-    width: 100%; /* Obrázek zůstane v kartě */
-    height: 350px; /* Pevná výška pro konzistentní vzhled */
+    width: 100%;
+    height: 350px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -385,9 +377,4 @@ footer {
     display: flex;
     align-items: flex-start;
   }
-}
-/* .karty {
-    flex-direction: row;
-    justify-items: center;
-    margin: 0 auto;
-}*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

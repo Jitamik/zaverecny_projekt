@@ -169,7 +169,6 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column; /* Obsah karet zůstane vedle sebe */
-    align-items: center;
     justify-content: flex-start;
     width: 100%; /* Karta vyplní šířku kontejneru */
     padding: 20px;
@@ -186,7 +185,6 @@ header {
 
  
 .foto_karta {
-    flex-shrink: 0;
     width: 100%;
    height: auto;
    object-fit: cover;
@@ -358,7 +356,7 @@ body {
 
     .foto_karta {
         width: 100%; /* Obrázek zůstane v kartě */
-        height: 250px; /* Pevná výška pro konzistentní vzhled */
+        height: auto; /* Pevná výška pro konzistentní vzhled */
         object-fit: cover;
     }
     .text-karta {

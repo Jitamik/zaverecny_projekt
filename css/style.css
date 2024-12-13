@@ -341,7 +341,7 @@ footer {
     margin: 20px auto;
   }
   .karta_clanku {
-    max-width: 450px; /* Zaručí konzistentní maximální šířku karty */
+    max-width: 500px; /* Zaručí konzistentní maximální šířku karty */
     margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
   }
   .foto_karta {
@@ -349,6 +349,10 @@ footer {
     height: 250px; /* Pevná výška pro konzistentní vzhled */
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .text-karta {
+    display: flex;
+    align-items: flex-start;
   }
 }
 /* .karty {

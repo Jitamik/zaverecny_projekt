@@ -352,7 +352,7 @@ body {
     }
 
     .karta_clanku {
-        max-width: 450px; /* Zaručí konzistentní maximální šířku karty */
+        max-width: 500px; /* Zaručí konzistentní maximální šířku karty */
         margin: 0 auto; /* Vycentruje kartu uvnitř řádku */
     }
 
@@ -360,6 +360,10 @@ body {
         width: 100%; /* Obrázek zůstane v kartě */
         height: 250px; /* Pevná výška pro konzistentní vzhled */
         object-fit: cover;
+    }
+    .text-karta {
+        display: flex;
+        align-items: flex-start;
     }
 
     }

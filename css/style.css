@@ -257,7 +257,7 @@ article {
 .karta_receptu::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 350px;
   height: 2px;
   background-color: #242424;
   margin: 10px 0;
